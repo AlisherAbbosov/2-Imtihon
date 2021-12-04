@@ -1,5 +1,5 @@
 .location {
-  padding: 0 165px 150px;
+  padding: 53px 165px 150px;
   position: relative;
   &__container {
     // display: inline-block;
@@ -19,7 +19,7 @@
       content: "";
       background-image: url("../images/arrow_left.png");
       position: absolute;
-      top: 299px;
+      top: 352px;
       right: 0;
       width: 740px;
       height: 150px;
@@ -29,8 +29,9 @@
       background-image: url("../images/circle__right.png");
       position: absolute;
       background-repeat: no-repeat;
-      top: 8px;
-      right: -50px;
+      z-index: -1;
+      top: 55px;
+      right: -345px;
       width: 445px;
       height: 445px;
     }
@@ -39,23 +40,44 @@
       &::before {
         content: "";
         position: absolute;
-        top: 670px;
+        top: 717px;
         left: -367px;
         width: 740px;
         height: 150px;
         background-image: url("../images/arrow_right_locat.png");
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        top: 697px;
+        left: 0;
+        width: 445px;
+        height: 445px;
+        background-image: url("../images/circle__left.png");
       }
     }
     &-3 {
       &::before {
         content: "";
         position: absolute;
-        top: 1371px;
+        top: 1471px;
         right: -385px;
         width: 735px;
         height: 138px;
         background-image: url("../images/arrow_left_locat.png");
         clip-path: none;
+      }
+      &::after {
+        content: "";
+        background-image: url("../images/circle__right.png");
+        position: absolute;
+        background-repeat: no-repeat;
+        z-index: -1;
+        top: 1371px;
+        right: -345px;
+        width: 445px;
+        height: 445px;
       }
     }
   }
@@ -63,7 +85,7 @@
     border-radius: 50%;
     &_left {
       float: left;
-      margin-right: 220px;
+      margin-right: 125px;
     }
 
     &_button {
@@ -89,9 +111,332 @@
 
   .text_primary {
     margin-top: 0;
-    margin-bottom: 13px;
     font-size: 48px;
     line-height: 48px;
     color: $colorSecondary;
+  }
+}
+
+@media only screen and (max-width: 1115px) {
+  .location {
+    padding: 53px 125px 150px;
+    &__container {
+      align-items: center;
+      padding: 0;
+    }
+    &__boxes {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 128px;
+    }
+    &__image-box {
+      margin-left: 20px;
+      &::before {
+        content: "";
+        background-image: url("../images/arrow_left.png");
+        position: absolute;
+        top: 352px;
+        right: 0;
+        width: 740px;
+        height: 150px;
+      }
+      &::after {
+        content: "";
+        background-image: url("../images/circle__right.png");
+        position: absolute;
+        background-repeat: no-repeat;
+        z-index: -1;
+        top: 55px;
+        right: -345px;
+        width: 445px;
+        height: 445px;
+      }
+      &-2 {
+        margin-right: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 1036px;
+          left: -367px;
+          width: 740px;
+          height: 150px;
+          background-image: url("../images/arrow_right_locat.png");
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background-repeat: no-repeat;
+          top: 1036px;
+          left: 0;
+          width: 445px;
+          height: 445px;
+          background-image: url("../images/circle__left.png");
+        }
+      }
+      &-3 {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2004px;
+          right: -385px;
+          width: 735px;
+          height: 138px;
+          background-image: url("../images/arrow_left_locat.png");
+          clip-path: none;
+        }
+        &::after {
+          content: "";
+          background-image: url("../images/circle__right.png");
+          position: absolute;
+          background-repeat: no-repeat;
+          z-index: -1;
+          top: 1919px;
+          right: -345px;
+          width: 445px;
+          height: 445px;
+        }
+      }
+    }
+    &__image {
+      &_left {
+        float: left;
+        margin-right: 0;
+      }
+
+      &_button {
+        margin-top: 20px;
+      }
+      &
+  
+      // FONTS
+      &_secondary {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        font-family: $fontSecondary;
+      }
+    }
+    &_text_box {
+      text-align: center;
+      padding: 53px 0;
+      &_2 {
+        float: right;
+      }
+    }
+
+    .text_primary {
+      margin-top: 0;
+      font-size: 48px;
+      line-height: 48px;
+      color: $colorSecondary;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .location {
+    padding: 53px 97px 104px;
+    &__container {
+      align-items: center;
+      padding: 0;
+    }
+    &__boxes {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 128px;
+    }
+    &__image-box {
+      margin-left: 20px;
+      &::before {
+        content: "";
+        background-image: url("../images/arrow_left.png");
+        position: absolute;
+        top: 352px;
+        right: 0;
+        width: 740px;
+        height: 150px;
+      }
+      &::after {
+        content: "";
+        background-image: url("../images/circle__right.png");
+        position: absolute;
+        background-repeat: no-repeat;
+        z-index: -1;
+        top: 55px;
+        right: -345px;
+        width: 445px;
+        height: 445px;
+      }
+      &-2 {
+        margin-right: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 1036px;
+          left: -367px;
+          width: 740px;
+          height: 150px;
+          background-image: url("../images/arrow_right_locat.png");
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background-repeat: no-repeat;
+          top: 1036px;
+          left: 0;
+          width: 445px;
+          height: 445px;
+          background-image: url("../images/circle__left.png");
+        }
+      }
+      &-3 {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2137px;
+          right: -385px;
+          width: 735px;
+          height: 138px;
+          background-image: url("../images/arrow_left_locat.png");
+          clip-path: none;
+        }
+        &::after {
+          content: "";
+          background-image: url("../images/circle__right.png");
+          position: absolute;
+          background-repeat: no-repeat;
+          z-index: -1;
+          top: 2037px;
+          right: -345px;
+          width: 445px;
+          height: 445px;
+        }
+      }
+    }
+    &__image {
+      &_left {
+        float: left;
+        margin-right: 0;
+      }
+
+      &_button {
+        margin-top: 20px;
+      }
+      &
+  
+      // FONTS
+      &_secondary {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        font-family: $fontSecondary;
+      }
+    }
+    &_text_box {
+      text-align: center;
+      padding: 53px 0;
+      &_2 {
+        float: right;
+      }
+    }
+
+    .text_primary {
+      margin-top: 0;
+      font-size: 48px;
+      line-height: 48px;
+      color: $colorSecondary;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .location {
+    padding: 37px 32px 104px;
+    &__boxes {
+      width: 100%;
+      margin-bottom: 83px;
+    }
+    &__image-box {
+      margin-left: 0;
+      &::before {
+        content: "";
+        background-image: url("../images/arrow_left.png");
+        position: absolute;
+        top: 352px;
+        right: 0;
+        width: 740px;
+        height: 150px;
+      }
+      &::after {
+        display: none;
+      }
+      &-2 {
+        margin-right: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 1036px;
+          left: -367px;
+          width: 740px;
+          height: 150px;
+          background-image: url("../images/arrow_right_locat.png");
+        }
+        &::after {
+          display: none;
+        }
+      }
+      &-3 {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2137px;
+          right: -385px;
+          width: 735px;
+          height: 138px;
+          background-image: url("../images/arrow_left_locat.png");
+          clip-path: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &__image {
+      &_left {
+        float: left;
+        margin-right: 0;
+      }
+
+      &_button {
+        margin-top: 20px;
+      }
+      &
+  
+      // FONTS
+      &_secondary {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        font-family: $fontSecondary;
+      }
+    }
+    &_text_box {
+      text-align: center;
+      padding: 53px 0;
+      &_2 {
+        float: right;
+      }
+    }
+
+    .text_primary {
+      margin-top: 0;
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 1px;
+    }
   }
 }
