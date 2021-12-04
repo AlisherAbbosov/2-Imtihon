@@ -12,54 +12,55 @@
     width: 100%;
     margin-bottom: 180px;
   }
-  &__image {
-    border-radius: 50%;
-    &-box {
-      margin-left: 220px;
+  &__image-box {
+    float: right;
+    margin-left: 20px;
+    &::before {
+      content: "";
+      background-image: url("../images/arrow_left.png");
+      position: absolute;
+      top: 299px;
+      right: 0;
+      width: 740px;
+      height: 150px;
+    }
+    &::after {
+      content: "";
+      background-image: url("../images/circle__right.png");
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 8px;
+      right: -50px;
+      width: 445px;
+      height: 445px;
+    }
+    &-2 {
+      margin-right: 220px;
       &::before {
         content: "";
         position: absolute;
-        top: 299px;
-        right: 0;
+        top: 670px;
+        left: -367px;
         width: 740px;
         height: 150px;
-        background-image: url("../images/arrow_left.png");
-      }
-      // &::after {
-      //   background-image: url("../images/circle__right.png");
-      //   content: "";
-      //   position: absolute;
-      //   top: 299px;
-      //   right: 0;
-      //   width: 20px;
-      //   height: 445px;
-      // }
-      &-2 {
-        margin-right: 220px;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 670px;
-          left: -367px;
-          width: 740px;
-          height: 150px;
-          background-image: url("../images/arrow_right_locat.png");
-        }
-      }
-      &-3 {
-        &::before {
-          content: "";
-          position: absolute;
-          top: 1150px;
-          right: -150px;
-          width: 735px;
-          height: 138px;
-          background-repeat: no-repeat;
-          background-image: url("../images/arrow_left_locat.png");
-          clip-path: none;
-        }
+        background-image: url("../images/arrow_right_locat.png");
       }
     }
+    &-3 {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1371px;
+        right: -385px;
+        width: 735px;
+        height: 138px;
+        background-image: url("../images/arrow_left_locat.png");
+        clip-path: none;
+      }
+    }
+  }
+  &__image {
+    border-radius: 50%;
     &_left {
       float: left;
       margin-right: 220px;

@@ -26,6 +26,9 @@
     line-height: 25px;
     color: $paragraphColor;
     text-decoration: none;
+    &:hover {
+      color: $colorPrimary;
+    }
   }
 }
 
@@ -50,5 +53,8 @@
   &-icon {
     color: $colorPrimary;
     font-size: 25px;
+    &:hover {
+      color: $hoverColor;
+    }
   }
 }

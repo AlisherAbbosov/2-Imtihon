@@ -30,6 +30,9 @@
     line-height: 25px;
     color: $paragraphColor;
     text-decoration: none;
+    &:hover {
+      color: $colorPrimary;
+    }
   }
   &_button {
     text-align: center;
