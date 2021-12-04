@@ -1,0 +1,138 @@
+.hero {
+  background-size: cover;
+  box-sizing: border-box;
+  background-image: url("../images/hero_bg.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  &_container {
+    position: relative;
+    padding: 153px 611px 152px 165px;
+  }
+  &_text_box {
+    margin-left: 95px;
+  }
+  &_primary {
+    font-size: 56px;
+    line-height: 56px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: $colorWhite;
+  }
+  &_secondary {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 25px;
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    font-family: $fontSecondary;
+    color: $colorWhite;
+  }
+  &_line {
+    position: absolute;
+    top: 380px;
+    left: 0;
+  }
+  &_arrow {
+    position: absolute;
+    top: 380px;
+    right: 288px;
+  }
+}
+
+@media only screen and (max-width: 1115px) {
+  .hero {
+    &_container {
+      padding: 153px 360px 152px 115px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1033px) {
+  .hero {
+    &_container {
+      text-align: center;
+      padding: 137px 98px 217px;
+    }
+    &_box {
+      height: 100%;
+    }
+    &_text_box {
+      margin-left: 0;
+    }
+    &_primary {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+    &_secondary {
+      margin-top: 0;
+      margin-bottom: 32px;
+    }
+    &_line {
+      display: none;
+    }
+    &_arrow {
+      top: 439px;
+      left: -127px;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .hero {
+    // margin-bottom: 61px;
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .hero {
+    &_container {
+      padding: 115px 32px 179px;
+    }
+    &_primary {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &_secondary {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 34px;
+    }
+    &_arrow {
+      top: 300px;
+      left: -312px;
+    }
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .hero {
+    &_container {
+      padding: 115px 32px 179px;
+    }
+    &_primary {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &_secondary {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 34px;
+    }
+    &_arrow {
+      top: 360px;
+      left: -312px;
+    }
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .hero_container {
+    background-image: url("../images/hero_bg@2x.jpg");
+  }
+}

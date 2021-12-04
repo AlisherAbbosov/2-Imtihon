@@ -1,0 +1,121 @@
+.header {
+  position: relative;
+  &_container {
+    padding: 34px 165px;
+    display: flex;
+    align-items: center;
+  }
+  &_logo {
+    margin-right: 58px;
+  }
+}
+
+.sitenav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &_list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 249px;
+    margin-right: auto;
+  }
+
+  &_link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    color: $paragraphColor;
+    text-decoration: none;
+  }
+  &_button {
+    text-align: center;
+    background-color: $colorPrimary;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
+    padding: 14px 39px;
+  }
+  &_hamburger {
+    display: none;
+  }
+}
+@media only screen and (max-width: $tablet) {
+  .header {
+    position: relative;
+    &_container {
+      padding: 34px 40px;
+      display: flex;
+      align-items: center;
+    }
+    &_logo {
+      margin-right: 58px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .header {
+    &_container {
+      padding: 24px 32px;
+      // display: flex;
+      display: block;
+      align-items: center;
+      text-align: center;
+    }
+    &_logo {
+      margin-right: 0;
+    }
+  }
+
+  .sitenav {
+    // display: flex;
+    // align-items: center;
+    // width: 100%;
+    display: none;
+    &_list {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      width: 249px;
+      margin-right: auto;
+    }
+
+    &_link {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 25px;
+      color: $paragraphColor;
+      text-decoration: none;
+    }
+    &_hamburger {
+      display: inline-block;
+      float: left;
+    }
+  }
+  .sitenav--open .sitenav_hamburger {
+    background-image: url("../images/sitenavClose.svg");
+  }
+  .sitenav--open .sitenav {
+    display: flex;
+    flex-direction: column;
+    // position: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $navbarBgColor;
+    z-index: 10;
+  }
+  .sitenav--open .sitenav_list {
+    flex-direction: column;
+  }
+}
